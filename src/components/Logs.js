@@ -1,7 +1,7 @@
 import { Card, Table, Progress, ProgressCard } from "tabler-react";
 import React from "react";
 
-function LogComponent(props) {
+const LogComponent = (props) => {
   return (
     <Table.Row>
       <Table.Col>{props.id}</Table.Col>
@@ -14,9 +14,9 @@ function LogComponent(props) {
       <Table.Col>{props.time_of_log}</Table.Col>
     </Table.Row>
   );
-}
+};
 
-function LogListComponent(props) {
+const LogListComponent = (props) => {
   const logs = props.logs;
   const logItems = logs.map((log) =>
     <LogComponent key={log.id}
@@ -47,7 +47,7 @@ function LogListComponent(props) {
       <Table.Body>{logItems}</Table.Body>
     </Table>
   )
-}
+};
 
 function LogListCardsComponent(props) {
   let logCards = [];
