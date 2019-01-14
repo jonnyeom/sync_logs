@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './tabler/dist/assets/css/dashboard.rtl.css'
+import './tabler/dist/assets/css/dashboard.css'
 import './index.css';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';

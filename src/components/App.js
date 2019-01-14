@@ -1,9 +1,8 @@
 import React from 'react';
-import "tabler-react/dist/Tabler.css";
-import './App.css';
 
-import { Page } from 'tabler-react';
-import { LogListComponent, LogListCardsComponent } from "./Logs";
+import AllLogs from './AllLogs';
+import ContentTypeLogs from './ContentTypeLogs'
+import ContentTypeSelectionCards from './ContentTypeSelectionCards';
 import Loading from './Loading';
 
 class App extends React.Component {
@@ -41,13 +40,17 @@ class App extends React.Component {
     this.updateData(sampleKeyedData);
   }
 
+  renderHeader() {
+    return <ContentTypeSelectionCards />;
+  };
+
   renderContent() {
     if (this.state.keyedData) {
-      return <LogListCardsComponent keyedData={this.state.keyedData}/>;
+      return <ContentTypeLogs keyedData={this.state.keyedData}/>;
     }
 
     if (this.state.data) {
-      return <LogListComponent logs={this.state.data}/>;
+      return <AllLogs logs={this.state.data}/>;
     }
 
     return <Loading/>;
@@ -55,9 +58,18 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className={'page'}>
-        <div className={'page-main'}>
-          <div className={'container'}>{this.renderContent()}</div>
+      <div className="page">
+        <div className="page-main">
+          <div className="container">
+            <div className="page-header">
+              <h1 className="page-title">
+                Overview
+              </h1>
+            </div>
+            {this.renderHeader()}
+            <AllLogs logs={this.state.data}/>
+            {this.renderContent()}
+          </div>
         </div>
       </div>
     )
