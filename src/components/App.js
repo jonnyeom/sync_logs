@@ -1,12 +1,13 @@
 import React from 'react';
 
 import AllLogs from './AllLogs';
-import ContentTypeLogs from './ContentTypeLogs'
-import ContentTypeSelectionCards from './ContentTypeSelectionCards';
+import ContentTypeLogsCards from './ContentTypeLogsCards'
+import ContentTypeSelector from './ContentTypeSelector';
 import Loading from './Loading';
+import ContentTypeLog from "./ContentTypeLog";
 
 class App extends React.Component {
-  state = { data: null, keyedData: []};
+  state = { content_type: '', data: null, keyedData: []};
 
   componentWillMount() {
     // this.loadLogData();
@@ -40,17 +41,25 @@ class App extends React.Component {
     this.updateData(sampleKeyedData);
   }
 
+  selectContentType = selection => {
+    this.setState({content_type: selection});
+  };
+
   renderHeader() {
-    return <ContentTypeSelectionCards />;
+    return <ContentTypeSelector onSelect={this.selectContentType}/>;
   };
 
   renderContent() {
-    if (this.state.keyedData) {
-      return <ContentTypeLogs keyedData={this.state.keyedData}/>;
+    if (this.state.content_type) {
+      return <ContentTypeLog title={this.state.content_type} records={this.state.keyedData[this.state.content_type]}/>
     }
 
     if (this.state.data) {
       return <AllLogs logs={this.state.data}/>;
+    }
+
+    if (this.state.keyedData) {
+      return <ContentTypeLogsCards keyedData={this.state.keyedData}/>;
     }
 
     return <Loading/>;
@@ -67,7 +76,6 @@ class App extends React.Component {
               </h1>
             </div>
             {this.renderHeader()}
-            <AllLogs logs={this.state.data}/>
             {this.renderContent()}
           </div>
         </div>

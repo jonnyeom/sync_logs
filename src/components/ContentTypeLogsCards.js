@@ -1,11 +1,11 @@
 import React from 'react';
 
-const ContentTypeLogs = (props) => {
+const ContentTypeLogsCards = (props) => {
   let logCards = [];
   for (let content_type in props.keyedData) {
     if (props.keyedData.hasOwnProperty(content_type)) {
       logCards.push(
-        <ContentTypeLog key={content_type} title={content_type} records={props.keyedData[content_type]}/>
+        <ContentTypeLogCard key={content_type} title={content_type} records={props.keyedData[content_type]}/>
       )
     }
   }
@@ -17,7 +17,7 @@ const ContentTypeLogs = (props) => {
   )
 };
 
-const ContentTypeLog = (props) => {
+const ContentTypeLogCard = (props) => {
   let records = [];
 
   let latestTime;
@@ -98,4 +98,4 @@ const ContentTypeLog = (props) => {
   )
 };
 
-export default ContentTypeLogs;
+export default ContentTypeLogsCards;
