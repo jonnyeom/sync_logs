@@ -8,10 +8,10 @@ class ContentTypeButton extends React.Component {
   render() {
     return (
       <div className="col-6 col-sm-4 col-lg-2">
-        <div className="card" onClick={this.onSelect}>
+        <div className="card" onClick={() => this.props.onSelect(this.props.content_type)}>
           <div className="card-body p-3 text-center">
             <div className="text-right text-green">6%</div>
-            <div className="h1 m-0">{this.props.label}</div>
+            <div className="h3 m-0">{this.props.label}</div>
             <div className="text-muted mb-4">{this.props.content_type}</div>
           </div>
         </div>
@@ -41,7 +41,7 @@ class ContentTypeSelector extends React.Component {
   render() {
     return (
       <div className="row">
-        <ContentTypeButton label='All' content_type='' onSelect={this.props.onSelect}/>
+        <ContentTypeButton label='All' content_type='all' onSelect={this.props.onSelect}/>
         <ContentTypeButton label='Person' content_type='person' onSelect={this.props.onSelect}/>
         <ContentTypeButton label='Product' content_type='product' onSelect={this.props.onSelect}/>
         <ContentTypeButton label='Course Item' content_type='course_item' onSelect={this.props.onSelect}/>

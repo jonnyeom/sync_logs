@@ -1,4 +1,5 @@
 import React from 'react';
+import Configs from '../config/Configs';
 
 class ContentTypeLog extends React.Component {
 
@@ -66,7 +67,7 @@ class ContentTypeLog extends React.Component {
         <div className="col-12">
           <div className="card">
             <div className="card-header">
-              <h3 className="card-title">{this.props.title}</h3>
+              <h3 className="card-title">Content Type: {Configs.getContentTypeLabel(this.props.title)}</h3>
               <div className="card-options">
                 Last Synced: {latestTime}
               </div>

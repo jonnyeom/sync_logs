@@ -5,6 +5,7 @@ import ContentTypeLogsCards from './ContentTypeLogsCards'
 import ContentTypeSelector from './ContentTypeSelector';
 import Loading from './Loading';
 import ContentTypeLog from "./ContentTypeLog";
+import Configs from "../config/Configs";
 
 class App extends React.Component {
   state = { content_type: '', data: null, keyedData: []};
@@ -72,7 +73,7 @@ class App extends React.Component {
           <div className="container">
             <div className="page-header">
               <h1 className="page-title">
-                {this.state.content_type ? this.state.content_type : 'Overview'}
+                {this.state.content_type ? Configs.getContentTypeLabel(this.state.content_type) : 'Overview'}
               </h1>
             </div>
             {this.renderHeader()}
