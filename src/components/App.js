@@ -72,7 +72,7 @@ class App extends React.Component {
           <div className="container">
             <div className="page-header">
               <h1 className="page-title">
-                Overview
+                {this.state.content_type ? this.state.content_type : 'Overview'}
               </h1>
             </div>
             {this.renderHeader()}
