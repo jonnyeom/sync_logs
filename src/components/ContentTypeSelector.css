@@ -1,0 +1,32 @@
+.content-selector {
+    border: none;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.20);
+}
+
+.content-selector .card-body {
+    z-index: 1;
+}
+
+.content-selector:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 300%;
+    width: 170%;
+    background: #e5f7fb;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: translateX(-100%) translateY(-15%) rotate(57deg);
+    transform: translateX(-100%) translateY(-15%) rotate(57deg);
+}
+
+.content-selector:hover:after {
+    -webkit-transform: translateX(-29%) translateY(-15%) rotate(57deg);
+    transform: translateX(-29%) translateY(-15%) rotate(57deg);
+}
