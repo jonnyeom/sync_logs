@@ -1,7 +1,7 @@
 {
   "name": "ispe_logs",
   "version": "0.1.0",
-  "homepage": "https://localhost:8888/modules/custom/imis/imis_content/imis_content_ui/app/build",
+  "homepage": "https://github.com/jonnyeom/ispe_logs",
   "private": true,
   "dependencies": {
     "@babel/core": "7.1.6",

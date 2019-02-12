@@ -33,6 +33,10 @@ const AllLogs = (props) => {
     <div className="row row-cards">
       <div className="col-12">
         <div className="card">
+          <div className="card-header">
+            <h3 className="card-title">Overview</h3>
+          </div>
+
           <div className="table-responsive">
             <table className="table card-table">
               <thead>

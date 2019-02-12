@@ -68,9 +68,11 @@ class ContentTypeLog extends React.Component {
           <div className="card">
             <div className="card-header">
               <h3 className="card-title">Content Type: {Configs.getContentTypeLabel(this.props.title)}</h3>
+              {latestTime &&
               <div className="card-options">
                 Last Synced: {latestTime}
               </div>
+              }
             </div>
 
             <div className="table-responsive">

@@ -51,7 +51,7 @@ class App extends React.Component {
   };
 
   renderContent() {
-    if (this.state.content_type) {
+    if (this.state.content_type && this.state.content_type !== 'all') {
       return <ContentTypeLog title={this.state.content_type} records={this.state.keyedData[this.state.content_type]}/>
     }
 
