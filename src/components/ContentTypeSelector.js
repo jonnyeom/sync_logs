@@ -1,4 +1,5 @@
 import React from 'react';
+import './ContentTypeSelector.css';
 
 class ContentTypeButton extends React.Component {
   onSelect = event => {
@@ -8,7 +9,7 @@ class ContentTypeButton extends React.Component {
   render() {
     return (
       <div className="col-6 col-sm-4 col-lg-2">
-        <div className="card" onClick={() => this.props.onSelect(this.props.content_type)}>
+        <div className="content-selector card" onClick={() => this.props.onSelect(this.props.content_type)}>
           <div className="card-body p-3 text-center">
             <div className="text-right text-green">6%</div>
             <div className="h3 m-0">{this.props.label}</div>
