@@ -1,6 +1,6 @@
 {
-  "short_name": "ISPE Logs",
-  "name": "ISPE Imis Sync Logs",
+  "short_name": "Sync Logs",
+  "name": "Sync Logs",
   "icons": [
     {
       "src": "favicon.ico",
