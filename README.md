@@ -17,6 +17,7 @@ Configure your Environment Variables as needed
 Recommended variables to configure -
 * PUBLIC_URL (The path to your app from your web root)
 * REACT_APP_WEBSITE_NAME (The name of your logs app)
+* REACT_APP_API_URL (The path to your API URL)
 
 All other configurable variables can be found [here](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 

@@ -11,14 +11,17 @@ class App extends React.Component {
   state = { content_type: '', data: null, keyedData: []};
 
   componentWillMount() {
-    // this.loadLogData();
-    this.updateSampleData();
+    // Use sample data in development environments.
+    if (process.env.NODE_ENV === 'development') {
+      this.updateSampleData();
+      return;
+    }
+
+    this.loadLogData();
   }
 
   loadLogData() {
-    const url = '/admin/imis-sync/logs/api';
-
-    fetch(url)
+    fetch(process.env.REACT_APP_API_URL)
       .then(function (response) {
         return response.json();
       })
