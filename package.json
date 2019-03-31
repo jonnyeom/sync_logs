@@ -1,6 +1,12 @@
 {
   "name": "sync_logs",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "Display sync history logs, sortable by category",
+  "homepage": "https://github.com/jonnyeom/sync_logs#readme",
+  "bugs": "https://github.com/jonnyeom/sync_logs/issues",
+  "author": {
+    "name": "Jonathan Eom"
+  },  
   "private": true,
   "dependencies": {
     "react": "^16.8.6",
