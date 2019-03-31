@@ -57,7 +57,7 @@ const ContentTypeLogCard = (props) => {
 
             <div className="progress progress-xs">
               <div className={`progress-bar bg-${progressColor}`} role="progressbar"
-                   style={{width: progressWidth + '%'}} aria-valuenow={`"${progressWidth}"`}
+                   style={{width: progressWidth + '%'}} aria-valuenow={progressWidth}
                    aria-valuemin="0" aria-valuemax="100"/>
             </div>
           </td>

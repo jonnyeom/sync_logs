@@ -8,7 +8,7 @@ class ContentTypeLog extends React.Component {
 
     return (
       <div className={`progress-bar bg-${color}`} role="progressbar"
-           style={{width: width + '%'}} aria-valuenow={`"${width}"`}
+           style={{width: width + '%'}} aria-valuenow={width}
            aria-valuemin="0" aria-valuemax="100"/>
     )
   }
