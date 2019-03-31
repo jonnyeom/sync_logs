@@ -1,3 +1,35 @@
+# Sync Logs
+
+Display Sync Logs of various types.
+
+## Usage
+Install Dependencies
+```bash
+npm install
+```
+
+Create a local `.env.local` file
+```bash
+cp .sample.env.local .env.local
+```
+
+Configure your Environment Variables as needed  
+Recommended variables to configure -
+* PUBLIC_URL  
+
+All configurable variables can be found [here](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+Build your Application
+```bash
+npm run build
+```
+
+Enjoy the Logs!
+
+<br>
+<br>
+
+# Other Notes
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
