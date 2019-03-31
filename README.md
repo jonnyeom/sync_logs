@@ -15,9 +15,10 @@ cp .sample.env.local .env.local
 
 Configure your Environment Variables as needed  
 Recommended variables to configure -
-* PUBLIC_URL  
+* PUBLIC_URL (The path to your app from your web root)
+* REACT_APP_WEBSITE_NAME (The name of your logs app)
 
-All configurable variables can be found [here](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+All other configurable variables can be found [here](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
 Build your Application
 ```bash
