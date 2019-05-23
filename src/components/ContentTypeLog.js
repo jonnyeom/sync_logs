@@ -19,7 +19,8 @@ class ContentTypeLog extends React.Component {
       month: 'numeric',
       day: 'numeric',
       hour: 'numeric',
-      minute: 'numeric'
+      minute: 'numeric',
+      second: 'numeric',
     })
     let successCount = parseInt(record.success_count);
     let failedCount = parseInt(record.fail_count);
@@ -27,7 +28,7 @@ class ContentTypeLog extends React.Component {
     let totalCount = successCount + failedCount + skippedCount;
 
     return (
-      <tr>
+      <tr key={record.id}>
         <td>{record.query_path}</td>
         <td>{startTime}</td>
         <td>
@@ -69,7 +70,8 @@ class ContentTypeLog extends React.Component {
         month: 'numeric',
         day: 'numeric',
         hour: 'numeric',
-        minute: 'numeric'
+        minute: 'numeric',
+        second: 'numeric',
       })
     }
 
