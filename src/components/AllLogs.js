@@ -35,6 +35,7 @@ const LogComponent = (props) => {
 
 const AllLogs = (props) => {
   const logs = props.logs;
+  props.logs.sort(function(a, b) {return a.time_of_log = b.time_of_log});
   const logItems = logs.map((log) =>
     <LogComponent key={log.id}
                   id={log.id}
