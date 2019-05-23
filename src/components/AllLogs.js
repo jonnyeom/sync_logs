@@ -1,22 +1,41 @@
 import React from 'react';
 
 const LogComponent = (props) => {
+  let start_time = new Date(props.sync_start_timestamp * 1000);
+  start_time = start_time.toLocaleString('en-US', {
+    month: 'numeric',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric',
+  })
+
+  let time_of_log = new Date(props.time_of_log * 1000);
+  time_of_log = time_of_log.toLocaleString('en-US', {
+    month: 'numeric',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric',
+  })
+
   return (
     <tr>
       <th scope="row">{props.id}</th>
       <td>{props.content_type}</td>
       <td>{props.query_path}</td>
-      <td>{props.sync_start_timestamp}</td>
+      <td>{start_time}</td>
       <td>{props.success_count}</td>
       <td>{props.fail_count}</td>
       <td>{props.skipped_count}</td>
-      <td>{props.time_of_log}</td>
+      <td>{time_of_log}</td>
     </tr>
   );
 };
 
 const AllLogs = (props) => {
   const logs = props.logs;
+  props.logs.sort(function(a, b) {return a.time_of_log = b.time_of_log});
   const logItems = logs.map((log) =>
     <LogComponent key={log.id}
                   id={log.id}

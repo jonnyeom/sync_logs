@@ -15,15 +15,22 @@ class ContentTypeLog extends React.Component {
 
   static getProgressbar(record) {
     let startTime = new Date(record.sync_start_timestamp * 1000);
+    startTime = startTime.toLocaleString('en-US', {
+      month: 'numeric',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric',
+    })
     let successCount = parseInt(record.success_count);
     let failedCount = parseInt(record.fail_count);
     let skippedCount = parseInt(record.skipped_count);
     let totalCount = successCount + failedCount + skippedCount;
 
     return (
-      <tr>
+      <tr key={record.id}>
         <td>{record.query_path}</td>
-        <td>{startTime.getMonth()}/{startTime.getDate()} {startTime.getHours()}:{startTime.getMinutes()}</td>
+        <td>{startTime}</td>
         <td>
           <div className="d-flex justify-content-between">
             <div>{successCount} Synced</div>
@@ -59,7 +66,13 @@ class ContentTypeLog extends React.Component {
 
     if (latestTime) {
       latestTime = new Date(latestTime * 1000);
-      latestTime = latestTime.getMonth() + '/' + latestTime.getDate() + ' at ' + latestTime.getHours() + ':' + latestTime.getMinutes();
+      latestTime = latestTime.toLocaleString('en-US', {
+        month: 'numeric',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric',
+      })
     }
 
     return (
