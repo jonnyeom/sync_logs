@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/modules/custom/module_name/app/build/main.css",
+    "main.js": "/modules/custom/module_name/app/build/main.js",
+    "main.js.map": "/modules/custom/module_name/app/build/main.js.map",
+    "index.html": "/modules/custom/module_name/app/build/index.html",
+    "main.css.map": "/modules/custom/module_name/app/build/main.css.map",
+    "precache-manifest.95ce1d9e809d0af92ec1e868b1b20725.js": "/modules/custom/module_name/app/build/precache-manifest.95ce1d9e809d0af92ec1e868b1b20725.js",
+    "service-worker.js": "/modules/custom/module_name/app/build/service-worker.js",
+    "static/media/dashboard.css": "/modules/custom/module_name/app/build/static/media/zw.e223cee5.svg"
+  }
+}

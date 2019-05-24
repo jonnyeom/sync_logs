@@ -10,7 +10,7 @@ tabler
 /coverage
 
 # production
-/build
+/build/static
 
 # development
 .idea
