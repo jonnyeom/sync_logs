@@ -5,7 +5,7 @@
     "main.js.map": "/modules/custom/module_name/app/build/main.js.map",
     "index.html": "/modules/custom/module_name/app/build/index.html",
     "main.css.map": "/modules/custom/module_name/app/build/main.css.map",
-    "precache-manifest.bba1b38e300fbc99754fc15f618f1099.js": "/modules/custom/module_name/app/build/precache-manifest.bba1b38e300fbc99754fc15f618f1099.js",
+    "precache-manifest.15cb753901409d48f82d62d46c7ffb68.js": "/modules/custom/module_name/app/build/precache-manifest.15cb753901409d48f82d62d46c7ffb68.js",
     "service-worker.js": "/modules/custom/module_name/app/build/service-worker.js",
     "static/media/dashboard.css": "/modules/custom/module_name/app/build/static/media/zw.e223cee5.svg"
   }
