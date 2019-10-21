@@ -1,0 +1,12 @@
+{
+  "name": "ispe/sync_logs",
+  "description": "Display sync history logs, sortable by category",
+  "homepage": "https://github.com/jonnyeom/sync_logs#readme",
+  "authors": [
+    {
+      "name": "Jonathan Eom",
+      "role": "Developer",
+      "email": "jeom@unleashed-technologies.com"
+    }
+  ]
+}
